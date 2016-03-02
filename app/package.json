@@ -1,0 +1,12 @@
+{
+  "name"           : "jenkins-websocket-notifier",
+  "version"        : "1.0.0",
+  "description"    : "jenkinsのビルド結果をWebSocketで受信しトレイ通知するElectronアプリ",
+  "author"         : "khsk",
+  "main"           : "main.js",
+  "dependencies"   : {},
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.4"
+  }
+}

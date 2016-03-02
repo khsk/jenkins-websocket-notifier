@@ -1,0 +1,156 @@
+html {
+	/* 背景画像用にサイズいっぱい確保 */
+	height: 100%;
+}
+
+body {
+	font-family: "Neue Helvetica", "Helvetica", "Arial", "Meiryo";
+
+	/* ドラッグ移動 */
+	-webkit-app-region: drag;
+	/* リサイズできるようにdragが適用されない隙間を作る */
+	/* marginは上下で倍px引くこと */
+	margin: 2px;
+	height:calc(100% - 4px);
+
+}
+
+.target {
+	margin-top:    10px;
+	margin-bottom: 10px;
+}
+
+.leftBox {
+	float:  left;
+	overflow: hidden;
+	/* minus .centerBar px my marigin px */
+	width:  calc(45% - 30px - 5px);
+	height: 100%;
+
+	margin-right: 5px;
+
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 0.5s;
+}
+
+.leftBox.invisible {
+/*	display: none;*/
+	width: 0px;
+	margin-right: 0px;
+
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 0.5s;
+}
+
+.leftContain {
+	margin-left: 5px;
+}
+
+.rightBox {
+/*	border:1px solid blue; */
+	float: left;
+	overflow: visible;
+	width: 45%;
+	
+	margin-left: 5px;
+
+	/* 背景画像用 */
+	height: 100%;
+	background-image:    url(../images/jenkins.png); 
+	background-position: bottom;
+	background-repeat:   no-repeat;
+	background-size:     contain;
+
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 0.5s;
+}
+
+.rightBox.wide {
+	/* minus .centerBar px my marigin px */
+	width:  calc(100% - 30px - 5px);
+
+	-webkit-transition-property: width;
+	-webkit-transition-duration: 0.5s;
+}
+
+.rightBox:after {
+	clear: both;
+}
+
+.stripe div:nth-of-type(odd){
+	background: rgba(246, 246, 246, 0.8)
+}
+
+.stripe div:nth-of-type(even){
+	background: rgba(255, 255, 255, 0.8)
+}
+
+.stripe * *{
+	margin-right: 5px;
+}
+
+.stripe div:hover{
+	/* ホバーの色変化は通常の設定より優先 */
+	background: #e8e8e8 !important;
+}
+
+.centerBar {
+
+	float: left;
+	width: 30px;
+	/* ウィンドウに接着したいので、bodyでとったマージン分追加する */
+	/* ネガティブマージンで相殺したボーダー分も100%から引かれるようなので上下分補填 */
+	height: calc(100% + 4px + 2px);
+
+	/* ボーダーは幅をとるのでネガティブマージンで相殺 */
+	/* トップはbodyのマージン分上にネガティブマージンを追加し、ウィンドウに接着させる */
+	margin: -3px -1px -1px;
+	border:solid 1px gray ;
+	border-left: none;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+
+	/* child centering */
+	display:table;
+}
+
+.centerBar span {
+	overflow: hidden;
+	height: 100%;
+
+	text-shadow: 0 2px 3px #000;
+
+	/* centering */
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.exit {
+	display:  block;
+	margin: 20px 0;
+}
+
+button {
+	margin: 5px 0;
+}
+
+/* .stripe div は:hoverを有効にするため; */
+input, label, button, a, .clickAction, .stripe div {
+	-webkit-app-region: no-drag;
+}
+
+label, a {
+	-webkit-user-select: none
+}
+
+
+
+input[type=text]:valid {
+	color: green;
+}
+
+input[type=text]:invalid {
+	color: red;
+}
+

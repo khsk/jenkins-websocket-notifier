@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./src/css/index.css">
+<title>Electron Read Us</title>
+</head>
+<body>
+<!-- <h1>Jenkins Notification!</h1> -->
+
+<div class="targetTable leftBox" id="leftBox">
+  <div class="leftContain">
+    <h3>Setting</h3>
+    <form onsubmit="return false">
+      <div class="target">
+        <div class="targetLabel">
+          <label for="hostname">
+            Jenkins Domain<br>
+          </label>
+        </div>
+        <div class="targetInput">
+          <!-- URL validate は面倒臭いというか足りない　http://sinya8282.sakura.ne.jp/?p=1064 -->
+          <input type="text" id="hostname" required  placeholder="localhost" pattern="[^:]*" autofocus>
+        </div>
+      </div>
+      <div class="target">
+        <div class="targetLabel">
+          <label for="port">Port(default:8080)</label>
+        </div>
+        <div class="targetInput">
+          <input type="number" id="port" required placeholder="8080">
+        </div>
+      </div>
+      <div class="target">
+        <div class="targetLabel">
+          <label for="ws_port">WebSocketPort(default:8081)</label>
+        </div>
+        <div class="targetInput">
+          <input type="number" id="ws_port" required placeholder="8081">
+        </div>
+      </div>
+      <div class="target">
+        <div class="targetLabel">
+          <label for="projects">
+            Project Filter<br>
+            (Comma-separated)<br>
+            (Empty to notify all of the project)
+          </label>
+        </div>
+        <div class="targetInput">
+          <input type="text" id="projects" placeholder="Proj1, Proj2">
+        </div>
+      </div>
+      <div class="target">
+        <div class="targetLabel">
+          <label for="results">
+            Result Filter<br>
+            (Comma-separated)<br>
+            (Empty to notify all of the result)
+          </label>
+        </div>
+        <div class="targetInput">
+          <input type="text" id="results" placeholder="SUCCESS, FAILURE">
+        </div>
+      </div>
+      <div class="target">
+        <div class="targetLabel">
+          <label for="voice">
+            Enable voice notification
+          </label>
+        </div>
+        <div class="targetInput">
+          <input type="checkbox" id="voice">
+        </div>
+      </div>
+      <input type="submit" id="register" value="Register and Connect">
+    </form>
+    <button id="clearLog">Clear Log</button>
+    <button class="exit" id="exit">Exit</button>
+  </div>
+</div>
+
+<div class="centerBar clickAction" id="centerBar">
+  <span>≪</span>
+</div>
+
+<div class="rightBox" id="rightBox">
+  <h3>Notification Log</h3>
+  <div class="stripe" id="logTree">
+    
+  </div>
+</div>
+
+<!-- 作りたいけど、置いておく -->
+<!-- <div class="footer" id="footer">
+  <ul>
+    <li></li>
+    <li>Show all projects</li>
+    <li>Open Jenkins</li>
+  </ul>
+</div>> -->
+
+</body>
+<script src="./src/index.js"></script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</html>
