@@ -3,7 +3,10 @@
 var app = require('app')
 var BrowserWindow = require('browser-window')
 
-require('crash-reporter').start()
+require('crash-reporter').start({
+	companyName:'khsk',
+	submitURL: 'https://github.com/khsk/jenkins-websocket-notifier',
+})
 
 var mainWindow = null
 
@@ -45,7 +48,7 @@ app.on('ready', function() {
 
 	mainWindow = new BrowserWindow({'width': 800, 'height': 600, 'frame': false, 'show': false, 'skip-taskbar': true})
 
-	mainWindow.loadUrl('file://' + __dirname + '/index.html')
+	mainWindow.loadURL('file://' + __dirname + '/index.html')
 
 	mainWindow.on('closed', function() {
 		mainWindow = null
