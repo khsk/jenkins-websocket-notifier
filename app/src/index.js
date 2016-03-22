@@ -213,7 +213,7 @@
 	})
 
 	document.getElementById('exit').addEventListener('click', function() {
-		require("remote").getCurrentWindow().close()
+		require("remote").app.quit()
 	})
 
 	document.getElementById('centerBar').addEventListener('click', hideForm)

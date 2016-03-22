@@ -24,7 +24,7 @@ app.on('ready', function() {
 	var Menu = require("menu");
 	var contextMenu = Menu.buildFromTemplate([
 		{ label: 'Show', click: function() { mainWindow.show() } },
-		{ label: 'Exit', click: function() { mainWindow.close() } }
+		{ label: 'Exit', click: function() { app.quit() } }
 	]);
 	tray.setContextMenu(contextMenu);
 
