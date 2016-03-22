@@ -20,7 +20,7 @@ Windwos7 64bit
 [WebSocketPlugin]
 をインストール
 
-!(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsp.JPG)
+![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsp.JPG)
 
 システムの設定
 `http://yourjenkins:8080/configure`
