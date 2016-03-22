@@ -26,12 +26,12 @@ Windwos7 64bit
 `http://yourjenkins:8080/configure`
 からWebSocketPluginの設定(任意)
 
-!(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsps.JPG)
+![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsps.JPG)
 
 各プロジェクトのビルド後の処理でWebsocketNotifierを追加
 `http://yourjenkins:8080/job/yourprojectname/configure`
 
-!(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwspab.JPG)
+![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwspab.JPG)
 
 # 特徴
 
@@ -46,9 +46,9 @@ JenkinsのWebSocketServerに接続し、ビルド通知を待ち受ける常駐�
 
 # Screenshot
 
-!(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/screenshot.jpg)
+![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/screenshot.jpg)
 
-!(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/screenshot_failure.JPG)
+![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/screenshot_failure.JPG)
 
 # 注意点
 
@@ -58,4 +58,4 @@ JenkinsのWebSocketServerに接続し、ビルド通知を待ち受ける常駐�
 外部にJenkinsを立てている場合は接続失敗のアラートが表示されますが、
 正しいドメインとポート番号の登録後は以後、前回登録した内容で自動接続を行います。
 
-!(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/firstrun.jpg)
+![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/firstrun.jpg)
