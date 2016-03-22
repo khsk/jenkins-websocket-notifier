@@ -14,7 +14,9 @@ Windwos7 64bit
 # 事前準備
 
 プラグインの管理
+
 `http://yourjenkins:8080/pluginManager/`
+
 から
 
 [WebSocketPlugin]
@@ -23,12 +25,15 @@ Windwos7 64bit
 ![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsp.JPG)
 
 システムの設定
+
 `http://yourjenkins:8080/configure`
+
 からWebSocketPluginの設定(任意)
 
 ![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsps.JPG)
 
 各プロジェクトのビルド後の処理でWebsocketNotifierを追加
+
 `http://yourjenkins:8080/job/yourprojectname/configure`
 
 ![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwspab.JPG)
@@ -53,7 +58,9 @@ JenkinsのWebSocketServerに接続し、ビルド通知を待ち受ける常駐�
 # 注意点
 
 アプリ起動時はWebSockerServerに自動的に接続しようとしますが、初回起動時は
+
 `ws://localhost:8081/jenkins`
+
 に接続しようとします。
 外部にJenkinsを立てている場合は接続失敗のアラートが表示されますが、
 正しいドメインとポート番号の登録後は以後、前回登録した内容で自動接続を行います。
