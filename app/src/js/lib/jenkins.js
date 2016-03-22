@@ -11,8 +11,6 @@ var Jenkins = class Jenkins {
 		this.results  = []
 		this.voice    = false
 
-		console.log(data)
-		console.log(typeof data)
 		// null かつ type が object に対応
 		if (typeof data === 'object' && data !== null) {
 			this.hostname = 'hostname' in data ? data.hostname.replace(/^\/|\/$/g,'') : this.hostname
@@ -90,10 +88,8 @@ Status : ${result.status}`
 				break
 			default :
 				path += 'sad-headshot18x18.png'
-				console.log('Not compatible :', result)
 				break
 		}
-		console.log(require("path").resolve(path))
 		return require("path").resolve(path)
 	}
 
@@ -114,15 +110,11 @@ Status : ${result.status}`
 				break
 			default :
 				path += 'gray.png'
-				console.log('Not compatible :', result)
 				break
 		}
-		console.log(require("path").resolve(path))
 		return require("path").resolve(path)
 	}
 
 }
-
-
 
 module.exports = Jenkins

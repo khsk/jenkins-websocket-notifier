@@ -6,11 +6,6 @@ var Tray = class Tray {
 	}
 
 	hasTray() {
-		console.log('hasTray')
-		console.log(this.tray)
-		console.log(!this.tray)
-		console.log(!!this.tray)
-
 		return !!this.tray
 	}
 
@@ -21,9 +16,7 @@ var Tray = class Tray {
 		var remote = require('remote')
 		var Tray = remote.require('tray')
 
-		console.log(icon)
 		this.tray = new Tray(icon)
-		console.log(this.tray)
 		this.tray.displayBalloon({icon:icon, title:"test",content:'content'})
 	}
 }
