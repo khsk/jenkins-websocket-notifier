@@ -17,7 +17,7 @@ Windwos7 64bit
 `http://yourjenkins:8080/pluginManager/`
 から
 
-[WebSocketPlugin]:http://d.hatena.ne.jp/mzp/20110612/jenkins
+[WebSocketPlugin]
 をインストール
 
 !(https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/jwsp.JPG)
@@ -59,3 +59,5 @@ JenkinsのWebSocketServerに接続し、ビルド通知を待ち受ける常駐�
 正しいドメインとポート番号の登録後は以後、前回登録した内容で自動接続を行います。
 
 ![](https://raw.githubusercontent.com/khsk/jenkins-websocket-notifier/master/readme-images/firstrun.jpg)
+
+[WebSocketPlugin]:http://d.hatena.ne.jp/mzp/20110612/jenkins
