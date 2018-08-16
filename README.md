@@ -9,7 +9,7 @@ Electron製のデスクトップアプリです
 
 # 動作検証環境
 
-Windwos7 64bit
+Windows7 64bit
 
 # 事前準備
 
